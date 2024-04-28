@@ -35,13 +35,7 @@ function App() {
         <FlexBoxCol>
           <FlexBoxRow>
             <TonConnectButton />
-            <Button>
-              {network
-                ? network === CHAIN.MAINNET
-                  ? "mainnet"
-                  : "testnet"
-                : "N/A"}
-            </Button>
+            <Button>{network ? (network === CHAIN.MAINNET ? "mainnet" : "testnet") : "N/A"}</Button>
           </FlexBoxRow>
           <Counter />
           <TransferTon />
